@@ -1,0 +1,590 @@
+/*!
+Theme Name: TryVary
+Theme URI: 
+Author: Renish Khunt
+Author URI: https://tryvary.com
+Description: TryVary the Best Blogging Theme for blogger bootstrap minimal blogger theme bootstrap template for the WordPress blogging site. Tryvary supper beautiful gutenberg blocks and you can create a beautiful blogs using tryvary theme. Tryvary simple creative and soft colors eye catching layout for your blog site.
+Version: 1.4
+Requires at least: 5.3
+Tested up to: 5.8
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: tryvary
+Tags: one-column, custom-background, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, blog, sticky-post, translation-ready
+
+Tryvary blog theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+TryVary build in bootstrap https://tryvary.com/, (C) 2012-2021 Tryvary, Inc.
+tryvary is distributed under the terms of the GNU GPL v2 or later.
+*/
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+$font-primary:    'PT Serif', serif;
+$font-headings:    'Roboto', sans-serif;
+
+$primary-color : #323232;
+$secondry-color : #FFFFFF;
+$background-color : #FBFBFB;
+$lightdark-background : #F0F2F4;
+
+body {
+  font: 100% $font-primary;
+  color: $primary-color;
+  line-height : 32.2167px;
+  word-spacing : 3px;
+  font-weight : 400;
+  background-color : $background-color;
+}
+
+aside .wp-block-latest-posts__list a:hover,
+aside .wp-block-latest-posts__list a,
+nav.navbar a:hover,
+nav.navbar a{
+  text-decoration : none;
+}
+.navbar-brand,
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-headings;
+  font-weight : 700;
+}
+a:hover,
+a{
+  text-decoration : underline;
+  color : $primary-color;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Media captions */
+figcaption,
+.wp-caption,
+.wp-caption-text,
+.wp-block-embed figcaption {
+  color: $primary-color;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.alignleft figcaption,
+.alignright figcaption,
+.alignleft .wp-caption,
+.alignright .wp-caption,
+.alignleft .wp-caption-text,
+.alignright .wp-caption-text,
+.alignleft .wp-block-embed figcaption,
+.alignright .wp-block-embed figcaption {
+  margin-bottom: 0;
+}
+
+/* WP Smiley */
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* Over here, place any elements that do not need to have their own file. */
+b,
+strong {
+  font-weight: 700;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+}
+.gallery-caption {
+  display: block;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+  background-color : $primary-color;
+}
+body nav.navbar-dark .navbar-nav .menu-item.active > a{
+  color : $secondry-color;
+}
+body nav.navbar-dark .navbar-nav .menu-item.active ul.dropdown-menu .menu-item.active a{
+  background-color : $primary-color;
+  color : $secondry-color;
+}
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+nav ul#menu-all-pages > li{
+  margin : 0px 5px;
+}
+main{
+  margin-top : 80px;
+}
+article{
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+article.sticky{
+  background-color: $primary-color !important;
+}
+article.sticky,
+article.sticky footer,
+article.sticky footer a,
+article.sticky a{
+  color : $secondry-color !important;
+}
+.article-listing header h1.page-title{
+  font-size: 26px;
+}
+.article-listing header.page-header,
+.article-listing article{
+  background-color : $secondry-color;
+  box-shadow: 4px 4px 12px -4px hsl(0deg 0% 59% / 50%);
+  margin-bottom : 30px;
+  padding : 30px;
+}
+.article-listing article header{
+  margin-bottom : 30px;
+}
+.article-listing article header .entry-meta span:not(:last-child):after{
+  content : "|";
+  margin-left : 10px;
+  margin-right : 10px;
+}
+.article-listing article header h2.entry-title{
+  margin-bottom : 0px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.article-listing article header h2.entry-title a{
+  text-decoration : none;
+}
+.article-listing article .entry-feature-image{
+  margin-bottom : 30px;
+}
+.article-listing article .entry-content{
+  margin-bottom : 30px;
+}
+.article-listing article .entry-content p{
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.article-listing article footer span.edit-link a:hover,
+.article-listing article footer span.edit-link a:focus,
+.article-listing article footer span.edit-link a,
+.article-listing article footer span.comments-link a:hover,
+.article-listing article footer span.comments-link a:focus,
+.article-listing article footer span.comments-link a{
+  text-decoration : none;
+}
+.article-listing article footer span:not(:last-child):after{
+  content : "|";
+  margin-left : 10px;
+  margin-right : 10px;
+}
+.article-listing article footer{
+  border-top: 1px solid #EBEBEB;
+  padding-top: 15px;
+}
+.article-listing article footer,
+.article-listing article footer a{
+  color : $primary-color;
+}
+.article-listing nav{
+  margin-bottom : 80px;
+  text-align : center;
+}
+.article-listing nav .nav-next,
+.article-listing nav .nav-previous{
+  display : inline-block;
+  margin-right: 20px;
+}
+.article-listing nav .nav-next a,
+.article-listing nav .nav-previous a{
+  background-color : $secondry-color;
+  box-shadow: 4px 4px 12px -4px hsl(0deg 0% 59% / 50%);
+  padding : 10px 15px;
+  display : inline-block;
+  text-decoration : none;
+}
+.article-listing article img{
+    display: block;
+    max-width: 100%;
+    height : auto;
+}
+.page-detail,
+.article-single{
+  background-color : $secondry-color;
+  box-shadow: 4px 4px 12px -4px hsl(0deg 0% 59% / 50%);
+  padding : 30px;
+  margin-bottom : 80px;
+}
+article.article-single header h1{
+  margin-bottom : 0px;
+}
+article.article-single header h1 a{
+  text-decoration : none;
+}
+article.article-single header .entry-meta span:not(:last-child):after{
+  content : "|";
+  margin-left : 10px;
+  margin-right : 10px;
+}
+
+article header .entry-meta a{
+  text-decoration : none;
+}
+article.page-detail .entry-feature-image
+article.article-single .entry-feature-image,
+article.page-detail header,
+article.article-single header{
+  margin-bottom : 30px;
+}
+article.page-detail .entry-content,
+article.article-single .entry-content{
+  overflow : hidden;
+  margin-bottom : 30px;
+  margin-top : 30px;
+}
+article.article-single .entry-content blockquote,
+article.page-detail .entry-content blockquote{
+  font-size: 1.4em;
+  width:90%;
+  margin:50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: $primary-color;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid $primary-color ;
+  line-height:1.6;
+  position: relative;
+  background:$lightdark-background;
+}
+article.page-detail .entry-content blockquote::before,
+article.article-single .entry-content blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:$primary-color;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+article.page-detail .entry-content blockquote::after,
+article.article-single .entry-content blockquote::after{
+  content: '';
+}
+
+.article-single-author-bio{
+  background-color: $secondry-color;
+  padding: 30px;
+  margin-bottom: 80px;
+  box-shadow: 4px 4px 12px -4px rgb(150 150 150 / 50%);
+}
+.article-single-author-bio img,
+.article-single-author-bio .author-bio-content{
+  display: inline-block;
+  vertical-align: top;
+}
+.article-single-author-bio .author-bio-content{
+  width: 84%;
+  margin-left: 15px;
+  overflow: hidden;
+}
+.article-single-author-bio .author-bio-content h2{
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+.article-single-author-bio .author-bio-content p{
+  margin-bottom: 5px;
+}
+.article-single-author-bio .author-bio-content a.author-link{
+  margin-top: 15px;
+  display: block;
+  float: right;
+}
+
+article.page-detail .entry-content h1,
+article.article-single .entry-content h1,
+article.page-detail .entry-content h2,
+article.article-single .entry-content h2,
+article.page-detail .entry-content h3,
+article.article-single .entry-content h3,
+article.page-detail .entry-content h4,
+article.article-single .entry-content h4,
+article.page-detail .entry-content figure,
+article.article-single .entry-content figure,
+article.page-detail .entry-content ul,
+article.article-single .entry-content ul,
+article.page-detail .entry-content ol,
+article.article-single .entry-content ol,
+article.page-detail .entry-content blockquote,
+article.article-single .entry-content blockquote,
+article.page-detail .entry-content p,
+article.article-single .entry-content p{
+  margin-bottom : 30px;
+}
+article.page-detail .entry-content code,
+article.page-detail .entry-content pre,
+article.article-single .entry-content code,
+article.article-single .entry-content pre{
+  background-color: $lightdark-background;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  display: block;
+}
+article.page-detail .entry-content ol li,
+article.page-detail .entry-content ul li,
+article.article-single .entry-content ol li,
+article.article-single .entry-content ul li{
+  margin-bottom: 10px;
+}
+article.page-detail .entry-content .page-links a,
+article.article-single .entry-content .page-links a{
+    background-color: $lightdark-background;
+    padding: 2px 10px;
+    display: inline-block;
+}
+article.page-detail .entry-content .page-links span,
+article.article-single .entry-content .page-links span{
+  background-color: $primary-color;
+  padding: 2px 10px;
+  display: inline-block;
+  color : $secondry-color;
+}
+article.page-detail img,
+article.article-single img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+article.article-single footer{
+  border-top : 1px solid #EBEBEB;
+  padding-top : 15px;
+  margin-top : 15px;
+}
+article.article-single footer,
+article.article-single footer a{
+  color : $primary-color;
+}
+article.article-single footer span:not(:last-child):after{
+  content : "|";
+  margin-left : 10px;
+  margin-right : 10px;
+}
+article.page-detail .entry-content div,
+article.article-single .entry-content div{
+  margin-bottom : 30px;
+}
+article.page-detail .page-links{
+  clear : both;
+  float : none;
+  width : 100%;
+  display : block;
+  margin-top : 30px;
+}
+.article-single-navigation{
+  background-color : $secondry-color;
+  box-shadow: 4px 4px 12px -4px hsl(0deg 0% 59% / 50%);
+  padding : 30px;
+  margin-bottom : 80px;
+  clear : both;
+  float : none;
+  width : 100%;
+  display : block;
+}
+.article-single-navigation nav .nav-links > div{
+  width : 49%;
+  display : inline-block;
+  vertical-align : top;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.article-single-navigation nav .nav-links > div.nav-next{
+  text-align : right;
+  border-left : 1px solid #EBEBEB;
+  padding-left: 10px;
+}
+.article-single-navigation nav .nav-links > div.nav-previous{
+  padding-right: 10px;
+}
+aside section{
+  margin-bottom : 30px;
+  overflow : hidden;
+}
+aside section h2{
+    background: $primary-color;
+    color: $secondry-color;
+    padding: 10px 10px;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+aside section footer a{
+  color : $primary-color;
+}
+.wp-block-search .wp-block-search__label{
+  width : auto;
+}
+
+/* Comments
+--------------------------------------------- */
+.comment-content a {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+.bypostauthor {
+  display: block;
+}
+.comments-area .comments-title{
+  margin-bottom : 50px;
+}
+
+.comments-area > ol.comment-list > li,
+.comments-area > ol.comment-list{
+  list-style: none;
+  list-style-type: none;
+  padding : 0px;
+}
+.comments-area ol.children,
+.comments-area ol.children > li{
+  list-style: none;
+  list-style-type: none;
+}
+.comments-area li article footer{
+  margin-bottom : 15px;
+  border-bottom : 1px solid #EBEBEB;
+  padding-bottom : 15px;
+}
+.comments-area li article footer .comment-metadata{
+  padding-left : 40px;
+}
+.comments-area li article footer a{
+  text-decoration: none;
+}
+.comments-area li article .reply{
+  padding-top: 15px;
+}
+.comments-area ol.children{
+    margin-top: 30px;
+    border-top: 1px solid #EBEBEB;
+    padding-top: 30px;
+}
+.comments-area ol.children > li:not(:last-child){
+    margin-bottom: 30px;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 30px;
+}
+.comments-area > ol.comment-list > li{
+  background-color : $secondry-color;
+  box-shadow: 4px 4px 12px -4px hsl(0deg 0% 59% / 50%);
+  padding : 30px;
+  margin-bottom : 80px;
+}
+
+footer.site-footer a, footer.site-footer{
+  color : $secondry-color;
+  margin-top : 120px;
+}
+
+input[type="search"],
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"], 
+input[type="url"], 
+textarea{
+  width : 100%;
+  display : block;
+  padding : 5px 10px;
+}
+
+input[type="submit"],
+aside .wp-block-search button.wp-block-search__button,
+button{
+  background-color : $primary-color;
+  color : $secondry-color;
+  border : 0px;
+  padding: 5px 20px;
+}
+
+/**
+Blog content stylesheet
+ */
+.alignleft {
+
+  /*rtl:ignore*/
+  float: left;
+
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+
+  /*rtl:ignore*/
+  float: right;
+
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+
+/* Category 07 is for any utility classes that are not assigned to a specific component. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  word-break: normal;
+}
+
+/**
+ *  Responsive CSS
+**/
+@media (max-width : 768px){
+   .article-single-author-bio{
+    text-align: center;
+   }
+   .article-single-author-bio .author-bio-content{
+      display: block;
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 30px;
+   }
+   .article-single-author-bio .author-bio-content a.author-link{
+    clear: both;
+    float: none;    
+  }
+}
